@@ -1,24 +1,14 @@
 /* Clients */
 
 .clients {
-  @media screen and (min-width: $mobile) {
-    display: flex;
-    flex-wrap: wrap;
-    margin: -15px;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
 }
 
 .clients__item {
-  &:not(:last-child) {
-    @media screen and (max-width: 479px) {
-      margin-bottom: 10px;
-    }
-  }
-
-  @media screen and (min-width: $mobile) {
-    width: calc((100% - 2 * 30px) / 2);
-    margin: 15px;
-  }
+  width: calc((100% - 2 * 30px) / 2);
+  margin: 15px;
 
   @media screen and (min-width: $tablet) {
     width: calc((100% - 3 * 30px) / 3);

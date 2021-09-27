@@ -105,13 +105,17 @@
 }
 
 .contacts__item:not(:last-child) {
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    margin-bottom: 10px;
+  }
+
   @media screen and (min-width: $desktop) {
     margin-right: 30px;
   }
 }
 
 .contacts__link {
-  display: inline-flex;
+  display: flex;
   align-items: center;
 
   color: var(--primary-text-color);

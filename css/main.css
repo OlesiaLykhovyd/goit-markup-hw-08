@@ -245,6 +245,12 @@ body {
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contacts__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .contacts__item:not(:last-child) {
     margin-right: 30px;
@@ -252,7 +258,7 @@ body {
 }
 
 .contacts__link {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   color: var(--primary-text-color);
   font-size: 12px;
@@ -531,7 +537,7 @@ body {
 }
 
 @media screen and (max-width: 767px) {
-  .team__item {
+  .team__item:not(:last-child) {
     margin-bottom: 30px;
   }
 }
@@ -633,25 +639,15 @@ body {
 }
 
 /* Clients */
-@media screen and (min-width: 480px) {
-  .clients {
-    display: flex;
-    flex-wrap: wrap;
-    margin: -15px;
-  }
+.clients {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
 }
 
-@media screen and (max-width: 479px) {
-  .clients__item:not(:last-child) {
-    margin-bottom: 10px;
-  }
-}
-
-@media screen and (min-width: 480px) {
-  .clients__item {
-    width: calc((100% - 2 * 30px) / 2);
-    margin: 15px;
-  }
+.clients__item {
+  width: calc((100% - 2 * 30px) / 2);
+  margin: 15px;
 }
 
 @media screen and (min-width: 768px) {
@@ -725,6 +721,10 @@ body {
     min-width: 50%;
     text-align: center;
   }
+}
+
+.footer-left {
+  flex-grow: 1;
 }
 
 @media screen and (max-width: 1199px) {
@@ -967,7 +967,7 @@ address {
 }
 
 @media screen and (max-width: 767px) {
-  .gallery__item {
+  .gallery__item:not(:last-child) {
     margin-bottom: 30px;
   }
 }
@@ -1078,6 +1078,11 @@ address {
     overflow-y: scroll;
     padding-left: 15px;
     padding-right: 15px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .backdrop {
     padding-top: 93px;
     padding-bottom: 93px;
   }
@@ -1292,8 +1297,8 @@ address {
 }
 
 .form__checkbox {
-  width: 16px;
-  height: 15px;
+  min-width: 16px;
+  min-height: 15px;
   border: 2px solid #212121;
   border-radius: 4px;
   margin-right: 8.4px;
